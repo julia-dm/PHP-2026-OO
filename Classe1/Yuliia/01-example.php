@@ -26,6 +26,26 @@ const IS_ALIVE=true;//par defaut publique, typage autorisé à partir de PHP 8.3
             echo "on a crée une instance de ".self::class;
         }
 
+        // méthode publique 
+public function methodePublic():string{
+// on peut l'utiliser por afficher ou modifier 
+// les propriétés
+// modification des propriétés (set)
+$this->name="Dmytruk";
+$this->surName="Yuliia";
+$this->identifiant = mt_rand(1000000, 9999999);
+// affichage
+return $this->name." ".$this->surName." a comme identifiant ".$this->identifiant;
 }
-// instanciation de $first
-$first=new MyFirstClass;
+ 
+}
+
+$first = new MyFirstClass();
+echo "<hr>";
+// appel d'une constante de classe
+// echo $first::IS_ALIVE; // partir de l'instance n'est recommendé
+echo MyFirstClass::IS_ALIVE;
+echo "<hr>";
+echo $first->methodePublic();
+echo "<hr>";
+var_dump($first);
