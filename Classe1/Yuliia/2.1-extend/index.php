@@ -1,20 +1,18 @@
 <?php
+
 require 'Animal.php';
-?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accueil</title>
-</head>
-<body>
-    <?php 
+require_once 'Chien.php';
 
-    $chien= new Animal("Rex");
+$animal = new Animal("LaChose");
+echo "Mon animal se nomme " . $animal->getName();
+echo "<br>".$animal->manger();
+echo "<br>".$animal->crier();
+var_dump($animal);
 
-    echo "Mon animal se nome" .$chien->getName();
-    var_dump($chien);
-    ?>
-</body>
-</html>
+$chien = new Chien("Rex");
+echo "<br>Mon chien se nomme " . $chien->getName();
+echo "<br>".$chien->manger();
+echo "<br>".$chien->aboyer();
+echo "<br>".$chien->crier();
+// var_dump($chien);
+

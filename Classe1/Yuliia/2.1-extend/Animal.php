@@ -10,9 +10,20 @@ class Animal
     // constructeur
     public function __construct(string $lulu)
     {
-
         $this->setName($lulu);
     }
+
+    public function manger(): string
+    {
+        return "{$this->nom} mange sa classe : ".self::class." ";
+    }
+
+    // méthode fait pour etre heritée
+     public function crier(): ?string
+    {
+        return self::class." ne peut pas crier";
+    }
+
     /**
      * SETTER (Mutator)
      */
