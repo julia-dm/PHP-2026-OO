@@ -8,7 +8,7 @@ $chat=new Chat("Tom",10);
 // affichange 
 echo "Nom: $chat->nom | Age: $chat->age <br>";
 $chat->nom="Felix";
-$chat->age=3;
+// $chat->age=3;
 echo "Nom: $chat->nom | Age: $chat->age <br>";
 
 echo $chat->miauler() . PHP_EOL;
