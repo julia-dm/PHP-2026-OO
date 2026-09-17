@@ -22,6 +22,7 @@ class Chanson{
      {
         // on remplit nos propriétés privée, on peut le faire car on est
         // à l'intérieur de la classe, $this représente l'instance
+        // donc l'objet créé via new Chanson(...)
         $this->titre = $title;
         $this->artiste = $artist;
         $this->duree = $time;
@@ -29,7 +30,8 @@ class Chanson{
      }
 
      // pour récupérer des propriétées privées, on doit créer
-     // des getters
+     // des getters qui récupèrent les propriétés de l'instance 
+     // == objet avec le mot clef $this->
      public function getTitre():string
      {
         return $this->titre;
